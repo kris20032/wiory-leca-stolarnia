@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kreatywna Stolarnia Wióry Lecą — Meble na wymiar · Pułtusk</title>
+<meta name="description" content="Kreatywna Stolarnia Wióry Lecą — meble na wymiar, kuchnie, szafy i zabudowy z drewna. Bezpłatny pomiar, własny projekt i solidny montaż. Zobacz nasze realizacje." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* === PALETA === */
+  :root{ --cream:#F3F1EC; --cream-2:#E6E3DB; --espresso:#23211E; --espresso-2:#43403A; --gold:#8A6B3C; --gold-d:#6E5430; --rose:#DBD3C5; --muted:#87837A; --white:#FFFFFF; --shadow:0 18px 50px -22px rgba(35,33,30,.46); }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Manrope',sans-serif;color:var(--espresso);background:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.serif{font-family:'Lora',serif;font-weight:600;line-height:1.15}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.6rem;border-radius:999px;font-weight:500;font-size:.95rem;transition:.25s;cursor:pointer;border:1px solid transparent}
+  .btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold-d));color:#fff;box-shadow:0 10px 24px -10px rgba(169,118,63,.7)}
+  .btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 30px -10px rgba(169,118,63,.8)}
+  .btn-dark{background:var(--espresso);color:#fff}
+  .btn-dark:hover{background:var(--espresso-2)}
+  header{position:sticky;top:0;z-index:50;background:rgba(250,245,239,.82);backdrop-filter:blur(12px);border-bottom:1px solid rgba(192,145,95,.18)}
+  nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .logo{font-family:'Lora',serif;font-size:1.5rem;font-weight:700;letter-spacing:.5px}
+  .logo span{color:var(--gold-d)}
+  .nav-links{display:flex;align-items:center;gap:2rem}
+  .nav-links a{font-size:.92rem;color:var(--espresso-2);transition:.2s}
+  .nav-links a:hover{color:var(--gold-d)}
+  .nav-links .btn{padding:.6rem 1.2rem}
+  .burger{display:none;background:none;border:0;font-size:1.6rem;cursor:pointer;color:var(--espresso)}
+  .eyebrow{display:inline-block;letter-spacing:3px;font-size:.74rem;font-weight:600;color:var(--gold-d);text-transform:uppercase;margin-bottom:18px}
+  section{padding:90px 0}
+  .head{text-align:center;max-width:42rem;margin:0 auto 54px}
+  .head .eyebrow{margin-bottom:12px}
+  .head h2{font-size:clamp(2rem,4vw,2.8rem);letter-spacing:-.012em}
+  .head p{color:var(--muted);margin-top:14px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .strip{background:var(--espresso);color:#f3e7db}
+  .strip .wrap{display:flex;flex-wrap:wrap;gap:14px 40px;justify-content:center;padding:20px 24px;font-size:.92rem}
+  .strip span{display:inline-flex;align-items:center;gap:.55rem}
+  .strip b{color:var(--gold)}
+  .price-note{margin-top:34px;color:var(--muted);font-size:.92rem}
+
+  /* === EDITORIAL: HERO pełnoekranowe, nagłówek na zdjęciu, lead pod spodem === */
+  .ed-hero-img{height:64vh;min-height:440px;position:relative;display:flex;align-items:flex-end;
+      background:url('img/hero.jpg') center 44%/cover no-repeat,linear-gradient(150deg,#efd9c6,#c0915f)}
+  .ed-hero-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,16,12,.05) 35%,rgba(20,16,12,.55))}
+  .ed-hero-cap{position:relative;z-index:2;color:#fff;padding-bottom:6vh}
+  .ed-hero-cap .eyebrow{color:#fff;opacity:.92}
+  .ed-hero-cap h1{font-size:clamp(2.6rem,6.6vw,5.2rem);font-weight:700;letter-spacing:-.02em;line-height:1.02;max-width:17ch;text-shadow:0 6px 34px rgba(0,0,0,.45)}
+  .ed-hero-cap h1 em{font-style:italic;color:var(--rose)}
+  .ed-hero-lead{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:end;padding:46px 0 8px}
+  .ed-hero-lead p{font-size:1.18rem;color:var(--espresso-2);max-width:44ch;line-height:1.6}
+  .ed-hero-lead .hero-cta{justify-content:flex-end}
+
+  /* === EDITORIAL: OFERTA jako numerowana lista (nie 3 karty) === */
+  .ed-offer{border-top:1px solid color-mix(in srgb,var(--espresso) 14%,transparent)}
+  .ed-offer .erow{display:grid;grid-template-columns:auto 1.1fr 1.9fr;gap:34px;align-items:baseline;
+      padding:32px 0;border-bottom:1px solid color-mix(in srgb,var(--espresso) 14%,transparent);transition:padding .25s ease}
+  .ed-offer .erow:hover{padding-left:12px}
+  .ed-offer .num{font-family:'Lora',serif;font-size:2.5rem;font-weight:700;color:var(--gold-d);line-height:.9}
+  .ed-offer .ttl{font-family:'Lora',serif;font-size:1.4rem;font-weight:600}
+  .ed-offer .desc{color:var(--muted);font-size:1rem;line-height:1.6;max-width:54ch}
+
+  /* === EDITORIAL: band-manifest z cytatem === */
+  .ed-quote{background:var(--espresso);color:#fff;text-align:center}
+  .ed-quote .wrap{max-width:60rem}
+  .ed-quote blockquote{font-family:'Lora',serif;font-style:italic;font-size:clamp(1.55rem,3.5vw,2.5rem);line-height:1.32}
+  .ed-quote blockquote span{color:var(--gold)}
+
+  /* === EDITORIAL: O nas — split, zdjęcie po prawej === */
+  .about{background:linear-gradient(180deg,var(--cream),#f5ebe1)}
+  .ed-about{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+  .ed-about-txt h2{font-size:clamp(1.9rem,3.6vw,2.6rem);margin-bottom:18px}
+  .ed-about-txt p{color:var(--espresso-2);margin-bottom:16px;max-width:60ch}
+  .ed-about-img{height:460px;border-radius:16px;box-shadow:var(--shadow);
+      background:url('img/about.jpg') center/cover no-repeat,linear-gradient(140deg,#3a2c25,#5a463c)}
+
+  /* === EDITORIAL: galeria bento (asymetryczna) === */
+  .ed-gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:198px;gap:14px}
+  .tile{position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:18px;color:#fff;font-weight:600;border-radius:12px;
+      box-shadow:0 12px 30px -16px rgba(58,44,37,.5);background-color:#c9a88f;background-size:cover;background-position:center;transition:.3s}
+  .tile:hover{transform:translateY(-4px)}
+  .tile span{position:relative;z-index:2;font-size:1rem;letter-spacing:.3px;text-shadow:0 2px 10px rgba(0,0,0,.45)}
+  .tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(58,44,37,.05) 45%,rgba(58,44,37,.72))}
+  .ed-gallery .tile:nth-child(1){grid-column:span 2;grid-row:span 2}
+  .ed-gallery .tile:nth-child(6){grid-column:span 2}
+
+  /* === opinie wyciszone (bez wielkich gwiazd) === */
+  .reviews{background:var(--espresso);color:#f3e7db;text-align:center}
+  .reviews .stars{color:var(--gold);font-size:1rem;letter-spacing:3px;margin-bottom:14px;opacity:.7}
+  .reviews h2{font-size:clamp(1.9rem,4vw,2.6rem);margin-bottom:14px;max-width:20ch;margin-inline:auto}
+  .reviews p{color:#cdbcae;max-width:40rem;margin:0 auto 28px}
+
+  /* === kontakt === */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:stretch}
+  .info .row{display:flex;gap:14px;align-items:flex-start;padding:18px 0;border-bottom:1px solid rgba(192,145,95,.2)}
+  .info .row .ic{font-size:1.3rem;margin-top:2px}
+  .info .row a{font-weight:500}
+  .info .row a:hover{color:var(--gold-d)}
+  .map{min-height:340px;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(192,145,95,.2)}
+  .map iframe{width:100%;height:100%;min-height:340px;border:0;display:block;filter:grayscale(.15) contrast(1.02)}
+  .contact-cta{margin-top:28px}
+  footer{background:#2c211c;color:#cdbcae;text-align:center;padding:34px 24px;font-size:.88rem}
+  footer .logo{font-size:1.2rem;color:#f3e7db;margin-bottom:8px}
+  footer a{color:var(--gold)}
+  .reveal{opacity:0;transform:translateY(22px);transition:.7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  @media(max-width:880px){
+    .ed-hero-lead,.ed-about,.contact-grid{grid-template-columns:1fr;gap:24px}
+    .ed-hero-lead .hero-cta{justify-content:flex-start}
+    .ed-about-img{height:300px}
+    .ed-gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:170px}
+    .ed-gallery .tile:nth-child(1){grid-column:span 2;grid-row:span 1}
+    .ed-gallery .tile:nth-child(6){grid-column:span 2}
+    .ed-offer .erow{grid-template-columns:auto 1fr;gap:14px 22px}
+    .ed-offer .desc{grid-column:1 / -1}
+    .nav-links{position:fixed;inset:72px 0 auto 0;flex-direction:column;background:var(--cream);padding:24px;gap:18px;border-bottom:1px solid rgba(192,145,95,.2);display:none}
+    .nav-links.open{display:flex}
+    .burger{display:block}
+  }
+  @media(max-width:560px){.ed-gallery{grid-template-columns:1fr}.ed-gallery .tile:nth-child(1),.ed-gallery .tile:nth-child(6){grid-column:span 1}}
+  .callbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;align-items:center;justify-content:center;gap:.55rem;background:linear-gradient(135deg,var(--gold),var(--gold-d));color:#fff;font-weight:600;font-size:1.02rem;padding:15px;text-decoration:none;box-shadow:0 -10px 30px -12px rgba(0,0,0,.45)}
+  @media(max-width:880px){ .callbar{display:flex} body{padding-bottom:62px} }
+
+/* === base premium === */
+/* BASE PREMIUM — wspólny system dla wszystkich branż (z _premium-web-craft.md).
+   Wstrzykiwany PO palecie skórki, PRZED overridem branżowym. Działa na realne klasy szablonu. */
+
+/* --- TOKENY: odstępy 4/8, fluid typografia clamp(), promienie, ruch, hairline, miękkie cienie --- */
+:root{
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-5:24px;
+  --space-6:32px; --space-7:48px; --space-8:64px; --space-9:96px; --space-10:128px;
+  --text-sm:clamp(.82rem,.8rem + .1vw,.9rem);
+  --text-base:clamp(1rem,.97rem + .15vw,1.125rem);
+  --text-lg:clamp(1.15rem,1.1rem + .25vw,1.35rem);
+  --text-h3:clamp(1.2rem,1.1rem + .5vw,1.5rem);
+  --text-h2:clamp(2rem,1.6rem + 2vw,2.9rem);
+  --text-h1:clamp(2.8rem,2rem + 4vw,5rem);
+  --r-sm:6px; --r-md:10px; --r-lg:16px;
+  --ease:cubic-bezier(.25,.46,.45,.94); --dur:.22s;
+  --hairline:1px solid color-mix(in srgb, var(--espresso) 12%, transparent);
+  --sh-sm:0 1px 2px rgba(0,0,0,.04), 0 2px 6px rgba(0,0,0,.05);
+  --sh-md:0 2px 4px rgba(0,0,0,.05), 0 8px 20px -6px rgba(0,0,0,.10);
+  --sh-lg:0 4px 8px rgba(0,0,0,.06), 0 18px 44px -16px rgba(0,0,0,.18);
+}
+
+/* --- WHITESPACE: hojny, fluid oddech (najtańszy wzrost postrzeganej ceny) --- */
+section{padding-block:clamp(64px,10vw,128px)}
+.wrap{max-width:min(92%,1140px)}
+
+/* --- TYPOGRAFIA: redakcyjna hierarchia, dociśnięte nagłówki, mierzona długość wiersza --- */
+.head{max-width:46rem}
+.head h2{font-size:var(--text-h2);letter-spacing:-.025em;line-height:1.1}
+.head p{font-size:var(--text-base);line-height:1.6;max-width:60ch;margin-inline:auto}
+.hero h1{font-size:var(--text-h1);letter-spacing:-.03em;line-height:1.05}
+.hero p.lead{font-size:var(--text-lg);max-width:34ch;line-height:1.55}
+.about-txt p{max-width:65ch}
+.reviews p{max-width:60ch;margin-inline:auto}
+
+/* --- OBRAZY: warstwowy miękki cień + większy promień (overlaye z szablonu zostają) --- */
+.hero-art,.about-art{box-shadow:var(--sh-lg);border-radius:var(--r-lg)}
+.map{box-shadow:var(--sh-md);border:none;border-radius:var(--r-lg)}
+
+/* --- KARTY: bez pełnej ramki, miękki cień, hierarchia promieni, sensowny hover --- */
+.card{border:none;box-shadow:var(--sh-sm);border-radius:var(--r-md);
+      padding:var(--space-6) var(--space-5);
+      transition:transform var(--dur) var(--ease),box-shadow var(--dur) var(--ease)}
+.card:hover{transform:translateY(-4px);box-shadow:var(--sh-md);border-color:transparent}
+.card h3{margin-bottom:var(--space-2)}
+.card p{color:var(--muted);font-size:var(--text-base);line-height:1.6}
+.card .ic{color:var(--gold-d);font-weight:700;letter-spacing:.08em}
+
+/* --- GALERIA: miękki cień + spójny hover --- */
+.tile{border-radius:var(--r-md);box-shadow:var(--sh-sm);
+      transition:transform var(--dur) var(--ease),box-shadow var(--dur) var(--ease)}
+.tile:hover{transform:translateY(-4px);box-shadow:var(--sh-md)}
+
+/* --- CIEMNE/KOLOROWE TŁA: biel z opacity zamiast szarości (kontrast WCAG) --- */
+.reviews p{color:#fff;opacity:.78}
+
+/* --- KONTAKT: emoji-ikony w kółku z tłem (powiększone emoji = tell AI), hairline separatory --- */
+.info .row{border-bottom:var(--hairline)}
+.info .row .ic{width:40px;height:40px;flex:0 0 40px;display:grid;place-items:center;border-radius:50%;
+      background:color-mix(in srgb,var(--gold) 16%,transparent);font-size:1.05rem;margin-top:0}
+
+/* --- PRZYCISKI: płynne przejścia + efekt „wciśnięcia" --- */
+.btn{transition:transform var(--dur) var(--ease),box-shadow var(--dur) var(--ease)}
+.btn:active{transform:translateY(0);box-shadow:var(--sh-sm)}
+
+/* --- RUCH / a11y: szanuj prefers-reduced-motion --- */
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms!important;transition:none!important}
+  .reveal{opacity:1!important;transform:none!important}
+}
+
+/* === FELT-QUALITY (anty-AI, „czuje się drogo") — 2026-06-21 === */
+/* Film grain: ledwo widoczne ziarno na całości (różnica „wygląda" vs „czuje się" drogo). pointer-events:none = nie blokuje klików. */
+body::after{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:.035;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:180px 180px}
+/* Hierarchia przez przezroczystość (premium): eyebrow drugorzędny, nie krzyczy */
+.eyebrow{opacity:.88}
+/* Widoczny focus klawiatury (podłoga jakości a11y) */
+:focus-visible{outline:2px solid var(--gold-d);outline-offset:3px;border-radius:2px}
+/* Zaznaczanie tekstu w kolorze marki — drobny, „dopieszczony" detal */
+::selection{background:color-mix(in srgb,var(--gold) 26%,transparent)}
+
+/* === TIER 2 — STRUKTURA i RYTM (2026-06-21) === */
+/* Znacznik akcentu zamiast dekoracyjnych 01/02/03 (numeracja tylko gdy realna sekwencja → build.py "numbered") */
+.card .ic-mark{display:block;width:32px;height:3px;border-radius:2px;background:var(--gold);opacity:.92;margin-bottom:var(--space-4)}
+/* Rytm sekcji: galeria jako odrębny, jaśniejszy pas + cienkie linie między jasnymi sekcjami (koniec z „płaskim kremem") */
+#galeria{background:var(--cream-2)}
+#oferta,#galeria,#kontakt{border-top:var(--hairline)}
+/* Jedna „ozdobna" mikro-interakcja: podkreślenie linków nawigacji rosnące od lewej (reszta ruchu = reveal) */
+.nav-links a:not(.btn){position:relative}
+.nav-links a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-4px;height:2px;width:100%;
+  background:var(--gold-d);transform:scaleX(0);transform-origin:left;transition:transform var(--dur) var(--ease)}
+.nav-links a:not(.btn):hover::after{transform:scaleX(1)}
+/* Hover karty (profesjonalny): złoty pasek „przejeżdża" przez górę karty + tytuł się złoci */
+.card .ic-mark{transition:width var(--dur) var(--ease),opacity var(--dur) var(--ease)}
+.card:hover .ic-mark{width:100%;opacity:1}
+.card h3{transition:color var(--dur) var(--ease)}
+.card:hover h3{color:var(--gold-d)}
+
+/* === recipe overrides (wood) === */
+/* ===== WOOD — premium override (stolarstwo / meble na wymiar) ===== */
+/* Sygnatura: ciepła kość słoniowa + przygaszony mosiądz, dużo oddechu,
+   hairline'y zamiast ciężkich kart, galeria masonry (gapless, bez dziur),
+   redakcyjny serif. Fonty (Cormorant + Inter) i paleta :root ustawia skin.py —
+   ten blok NIE definiuje :root ani nie ładuje fontów. */
+
+/* Oddech — większe paddingi sekcji = #1 sygnał premium z przepisu */
+section{padding:118px 0}
+.head{margin:0 auto 64px}
+.head h2{font-size:clamp(2.2rem,4.4vw,3.2rem);font-weight:600;letter-spacing:.004em;line-height:1.12}
+.head p{color:var(--muted);margin-top:18px;font-size:1.02rem}
+
+/* HERO — jeden duży klimatyczny kadr, wysoki serif na cienkiej wadze */
+.hero{background:linear-gradient(165deg,var(--cream) 0%,var(--cream-2) 100%)}
+.hero-inner{padding:104px 0 112px;gap:56px}
+.hero h1{font-weight:600;font-size:clamp(3.1rem,7.2vw,5.6rem);letter-spacing:-.01em;line-height:1.06;overflow-wrap:break-word}
+.hero h1 em{color:var(--gold-d)}
+.hero p.lead{font-size:1.16rem;color:var(--espresso-2);line-height:1.7;max-width:32rem}
+.eyebrow{letter-spacing:4px;font-size:.72rem;color:var(--gold-d)}
+.hero-art{height:480px;border-radius:6px;box-shadow:0 30px 70px -34px rgba(43,38,34,.55)}
+.hero-art::after{background:linear-gradient(180deg,rgba(43,38,34,.02),rgba(43,38,34,.26))}
+
+/* Pasek faktów — spokojny, mosiądz oszczędnie */
+.strip{background:var(--espresso)}
+.strip .wrap{padding:24px;gap:16px 54px;font-size:.9rem;letter-spacing:.02em}
+.strip b{color:var(--gold);font-weight:600}
+
+/* Karty — HAIRLINE zamiast ciężkiego cienia (anty-AI detal z przepisu) */
+.grid{gap:0;border-top:1px solid rgba(140,131,119,.3)}
+.card{background:transparent;border:0;border-bottom:1px solid rgba(140,131,119,.3);
+  border-right:1px solid rgba(140,131,119,.3);border-radius:0;padding:40px 34px}
+.card:nth-child(3n){border-right:0}
+.card:hover{transform:none;box-shadow:none;background:rgba(168,136,78,.05);border-color:rgba(140,131,119,.3)}
+.card .ic{color:var(--gold-d);font-weight:600;letter-spacing:2px}
+.card .ic::after{background:var(--gold);opacity:.8;width:34px}
+.card h3{font-size:1.32rem;font-weight:600;margin-bottom:10px}
+/* czytelność: opisy oferty na espresso-2 (kontrast ~9:1), nie szary --muted (~3.3:1) */
+.card p{color:var(--espresso-2);font-size:.96rem;line-height:1.7}
+
+/* O nas / rzemiosło — duży kadr warsztatu, cytat w italiku */
+.about{background:var(--cream-2)}
+.about-grid{gap:64px}
+.about-art{height:440px;border-radius:6px;box-shadow:0 30px 70px -34px rgba(43,38,34,.55)}
+.about-txt h2{font-weight:600}
+.about-txt p{line-height:1.78}
+
+/* GALERIA — masonry asymetryczne, gutterless. Dla DOKŁADNIE 6 kafli (g1..g6)
+   wysokie są 1/4/5 (po jednym na kolumnę, przesunięte) → siatka 3x3 BEZ dziur. */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:230px;gap:0}
+.tile{aspect-ratio:auto;border-radius:0;box-shadow:none;padding:22px}
+.tile:nth-child(1),.tile:nth-child(4),.tile:nth-child(5){grid-row:span 2}
+.tile:hover{transform:none;filter:brightness(1.04)}
+.tile::after{background:linear-gradient(180deg,rgba(43,38,34,.0) 40%,rgba(43,38,34,.66))}
+
+/* Opinie — ciemny orzech, mosiądz na gwiazdkach */
+.reviews .stars{color:var(--gold);letter-spacing:6px}
+.reviews h2{font-weight:600}
+
+/* Cienka linia-akcent pod sekcją map/info; spokojny kontakt */
+.info .row{border-bottom:1px solid rgba(140,131,119,.28);padding:20px 0}
+.map{border-radius:6px;border:1px solid rgba(140,131,119,.28);box-shadow:none}
+
+/* Nawigacja / stopka — przygaszone */
+header{background:rgba(246,242,234,.86);border-bottom:1px solid rgba(140,131,119,.22)}
+.nav-links a:hover{color:var(--gold-d)}
+
+@media(max-width:880px){
+  section{padding:74px 0}
+  .hero-inner{padding:64px 0 72px;gap:32px}
+  .hero-art{height:320px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .card:nth-child(3n){border-right:1px solid rgba(140,131,119,.3)}
+  .card:nth-child(2n){border-right:0}
+  /* galeria 2 kolumny, równe kafle — reset wysokich (1/4/5) by uniknąć dziur */
+  .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:200px}
+  .tile{grid-row:auto}
+}
+@media(max-width:560px){
+  .grid{grid-template-columns:1fr}
+  .card,.card:nth-child(2n){border-right:0}
+  .gallery{grid-template-columns:1fr;grid-auto-rows:240px}
+}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+  <div class="logo">Kreatywna Stolarnia Wióry <span>Lecą</span></div>
+  <div class="nav-links" id="menu">
+    <a href="#oferta">Oferta</a><a href="#onas">O nas</a><a href="#galeria">Galeria</a><a href="#kontakt">Kontakt</a>
+    <a class="btn btn-gold" href="#kontakt">Zobacz realizacje</a>
+  </div>
+  <button class="burger" id="burger" aria-label="Menu">☰</button>
+</nav></div></header>
+
+<section class="ed-hero" style="padding:0">
+  <div class="ed-hero-img" role="img" aria-label="Kreatywna Stolarnia Wióry Lecą">
+    <div class="wrap ed-hero-cap reveal">
+      <span class="eyebrow">Stolarstwo i meble na wymiar · Pułtusk</span>
+      <h1>Meble robione <em>pod Twoje wnętrze</em></h1>
+    </div>
+  </div>
+  <div class="wrap ed-hero-lead reveal">
+    <p>Projektujemy i wykonujemy meble dopasowane do każdego centymetra Twojego mieszkania. Od pomiaru, przez projekt, po montaż — wszystko w jednych rękach, z dbałością o drewno i każdy detal.</p>
+    <div class="hero-cta">
+      <a class="btn btn-gold" href="#kontakt">Zobacz realizacje</a>
+      <a class="btn btn-dark" href="tel:+48501219459">Zadzwoń: +48 501 219 459</a>
+    </div>
+  </div>
+</section>
+
+<div class="strip"><div class="wrap">
+  <span>✦ <b>Solidne</b>&nbsp;wykonanie</span>
+  <span>✦ <b>Pomiar</b>&nbsp;i projekt</span>
+  <span>✦ <b>Terminowy</b>&nbsp;montaż</span>
+  <span>✦ <b>Gwarancja</b>&nbsp;na meble</span>
+</div></div>
+
+<section id="oferta"><div class="wrap">
+  <div class="head reveal" style="text-align:left;max-width:46rem;margin:0 0 40px"><span class="eyebrow">Co robimy</span><h2>Nasze usługi</h2><p style="margin-inline:0">Każde zlecenie traktujemy indywidualnie — dobieramy materiał, fronty i okucia tak, by mebel służył latami i pasował do Twojego stylu.</p></div>
+  <div class="ed-offer">
+    <div class="erow reveal"><div class="num">01</div><div class="ttl">Meble na wymiar</div><div class="desc">Projektujemy i wykonujemy meble dopasowane do nietypowych wnętrz i Twoich potrzeb.</div></div>
+    <div class="erow reveal"><div class="num">02</div><div class="ttl">Kuchnie na wymiar</div><div class="desc">Funkcjonalne zabudowy kuchenne z trwałych frontów i przemyślaną organizacją wnętrza.</div></div>
+    <div class="erow reveal"><div class="num">03</div><div class="ttl">Szafy i garderoby</div><div class="desc">Pojemne szafy wnękowe i garderoby, które wykorzystują każdy zakamarek mieszkania.</div></div>
+    <div class="erow reveal"><div class="num">04</div><div class="ttl">Zabudowy wnęk</div><div class="desc">Zabudowy pod skosy, wnęki i nietypowe przestrzenie, których nie znajdziesz w sklepie.</div></div>
+    <div class="erow reveal"><div class="num">05</div><div class="ttl">Schody i drewno lite</div><div class="desc">Schody, blaty i elementy z litego drewna wykończone z dbałością o słoje i fakturę.</div></div>
+    <div class="erow reveal"><div class="num">06</div><div class="ttl">Pomiar i projekt</div><div class="desc">Przyjeżdżamy, mierzymy i przygotowujemy projekt, byś wiedział dokładnie, co powstanie.</div></div>
+  </div>
+  <p class="price-note">Wycena i terminy ustalane indywidualnie: <a href="#kontakt" style="color:var(--gold-d);font-weight:500">Zobacz realizacje →</a></p>
+</div></section>
+
+<section class="ed-quote"><div class="wrap reveal">
+  <blockquote>„Robimy meble tak, jakby miały stanąć <span>w naszym własnym domu</span>.”</blockquote>
+</div></section>
+
+<section class="about" id="onas"><div class="wrap ed-about">
+  <div class="ed-about-txt reveal">
+    <span class="eyebrow">O nas</span><h2>Rzemiosło, które widać w detalu</h2>
+    <p>Kreatywna Stolarnia Wióry Lecą to warsztat, w którym drewno i płyta zamieniają się w meble dopasowane do konkretnego wnętrza. Nie pracujemy z gotowych katalogów — każdy projekt powstaje od nowa, pod wymiar Twojego pokoju, kuchni czy garderoby.</p><p>Cenimy sobie uczciwe doradztwo i terminowość. Podpowiemy, jaki materiał sprawdzi się najlepiej, dobierzemy okucia i fronty, a po montażu zostawimy po sobie porządek. Zależy nam, żebyś wrócił do nas przy kolejnym pomyśle.</p>
+    <a class="btn btn-dark" href="#kontakt" style="margin-top:8px">Odwiedź nas</a>
+  </div>
+  <div class="ed-about-img reveal" role="img" aria-label="Kreatywna Stolarnia Wióry Lecą"></div>
+</div></section>
+
+<section id="galeria"><div class="wrap">
+  <div class="head reveal"><span class="eyebrow">Galeria</span><h2>Nasze realizacje</h2><p>Zobacz meble, które wyszły z naszego warsztatu — od kuchni i szaf po detale z litego drewna w domach naszych klientów.</p></div>
+  <div class="ed-gallery">
+    <div class="tile reveal" style="background-image:url('img/g1.jpg')"><span>Kuchnia na wymiar</span></div>
+    <div class="tile reveal" style="background-image:url('img/g2.jpg')"><span>Szafa wnękowa</span></div>
+    <div class="tile reveal" style="background-image:url('img/g3.jpg')"><span>Zabudowa pod skos</span></div>
+    <div class="tile reveal" style="background-image:url('img/g4.jpg')"><span>Detal drewna</span></div>
+    <div class="tile reveal" style="background-image:url('img/g5.jpg')"><span>Schody z drewna</span></div>
+    <div class="tile reveal" style="background-image:url('img/g6.jpg')"><span>Mebel we wnętrzu</span></div>
+  </div>
+</div></section>
+
+<section class="reviews ed"><div class="wrap reveal">
+  <h2>Zaufali nam klienci</h2><p>Klienci, którzy zlecili nam meble do swoich domów i mieszkań, doceniają solidne wykonanie i to, że dopinamy montaż na czas.</p>
+  <a class="btn btn-gold" href="#kontakt">Bezpłatny pomiar i wycena</a>
+</div></section>
+
+<section id="kontakt" class="about"><div class="wrap">
+  <div class="head reveal"><span class="eyebrow">Zapraszamy</span><h2>Kontakt i rezerwacja</h2></div>
+  <div class="contact-grid">
+    <div class="info reveal">
+      <div class="row"><span class="ic">📍</span><div><b>Adres</b><p>Pułtusk, mazowieckie</p></div></div>
+      <div class="row"><span class="ic">📞</span><div><b>Telefon</b><p><a href="tel:+48501219459">+48 501 219 459</a></p></div></div>
+      <div class="row"><span class="ic">🗓️</span><div><b>Rezerwacja</b><p>Bezpłatny pomiar i wycena</p></div></div>
+      <div class="row"><span class="ic">⏰</span><div><b>Godziny</b><p>Zapraszamy — zadzwoń po szczegóły</p></div></div>
+      <div class="contact-cta"><a class="btn btn-gold" href="#kontakt">Zobacz realizacje</a></div>
+    </div>
+    <div class="map reveal"><iframe src="https://maps.google.com/maps?q=52.699176%2C21.112586&z=15&output=embed" loading="lazy" title="Mapa — Kreatywna Stolarnia Wióry Lecą"></iframe></div>
+  </div>
+</div></section>
+
+<a class="callbar" href="tel:+48501219459">📞 Zadzwoń: +48 501 219 459</a>
+
+<footer>
+  <div class="logo">Kreatywna Stolarnia Wióry <span style="color:var(--gold)">Lecą</span></div>
+  <p>Pułtusk, mazowieckie · +48 501 219 459</p>
+  <p style="margin-top:6px;opacity:.7">© 2026 Kreatywna Stolarnia Wióry Lecą &nbsp;·&nbsp; Projekt strony: Krzysztof Brzeziński</p>
+</footer>
+
+<script>
+  var b=document.getElementById('burger'),m=document.getElementById('menu');
+  if(b&&m){b.addEventListener('click',function(){m.classList.toggle('open')});
+    m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open')})});}
+  function _rv(el){el.classList.add('in')}
+  var _els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){_rv(e.target);io.unobserve(e.target)}})},{threshold:.08,rootMargin:'0px 0px -8% 0px'});
+    _els.forEach(function(el){io.observe(el)});
+    setTimeout(function(){document.querySelectorAll('.reveal:not(.in)').forEach(_rv)},2000); /* bezpiecznik: gwarancja widoczności */
+  } else { _els.forEach(_rv); }
+</script>
+</body>
+</html>
