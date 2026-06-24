@@ -343,6 +343,7 @@ footer{background:var(--dark);color:#fff;padding-block:var(--space-9) var(--spac
 .gallery .ph:hover img{transform:scale(1.04)}
 @media(max-width:920px){.gallery{columns:2}}
 @media(max-width:560px){.gallery{columns:1}}
-/* pagehead podstron — nieco niższy, łagodniejszy kadr */
-.pagehead{min-height:42vh;max-height:520px}
-.pagehead img{object-position:center 42%}
+/* pagehead podstron — kadr 16:9, by pokazać cały obiekt (nie ucinać dachu/podłogi) */
+.pagehead{min-height:auto;max-height:none;aspect-ratio:16/9}
+.pagehead img{object-position:center 48%}
+@media(max-width:760px){.pagehead{aspect-ratio:auto;min-height:54vh}}
