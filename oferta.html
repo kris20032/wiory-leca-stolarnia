@@ -4,75 +4,96 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Oferta — Kreatywna Stolarnia „Wióry Lecą" · Pułtusk</title>
-<meta name="description" content="Wiaty, zadaszenia, altany, pergole, tarasy, drewniane żaluzje, donice i meble ogrodowe na wymiar — pełna oferta stolarni Wióry Lecą z Pułtuska.">
+<meta name="description" content="Wiaty, zadaszenia, altany, pergole, tarasy, drewniane żaluzje, donice i meble ogrodowe na wymiar — pełna oferta stolarni Wióry Lecą.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css?v=2">
 </head>
 <body>
-<header>
-  <div class="nav">
+<header class="nav">
+  <div class="wrap nav-inner">
     <a class="brand" href="index.html">
-      <img class="logo" src="img/logo.jpg" alt="Logo Wióry Lecą">
-      <span><b>Wióry Lecą</b><span class="sub">Kreatywna Stolarnia · Pułtusk</span></span>
+      <img class="blogo" src="img/logo.jpg" alt="Logo Wióry Lecą">
+      <span class="bw"><span class="name">Wióry Lecą</span><span class="sub">Kreatywna Stolarnia · Pułtusk</span></span>
     </a>
-    <nav class="links"><a href="index.html">Start</a><a href="oferta.html" class="active">Oferta</a><a href="zaluzje.html">Drewniane żaluzje</a><a href="realizacje.html">Realizacje</a><a href="o-nas.html">O firmie</a><a href="kontakt.html">Kontakt</a></nav>
-    <a class="btn btn-gold cta" href="tel:+48501219459">Zadzwoń</a>
-    <button class="burger" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    <nav class="nav-links">
+      <a href="index.html">Strona główna</a><a href="oferta.html" class="active">Oferta</a><a href="zaluzje.html">Drewniane żaluzje</a><a href="realizacje.html">Realizacje</a><a href="o-nas.html">O firmie</a><a href="kontakt.html">Kontakt</a>
+      <a href="tel:+48501219459" class="btn btn-accent">Zadzwoń</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </header>
-<section class="phero" style="padding:0">
-  <img class="bg" src="img/g25.jpg" alt="Co dla Ciebie zrobimy">
-  <div class="wrap inner">
-    <div class="eyebrow">Oferta</div>
+<section class="pagehead">
+  <img src="img/g25.jpg" alt="Co dla Ciebie zrobimy">
+  <div class="wrap">
+    <span class="eyebrow">Oferta</span>
     <h1>Co dla Ciebie zrobimy</h1>
-    <p>Drewniana stolarka zewnętrzna i ogrodowa — od dużych konstrukcji po detale, które robią klimat.</p>
+    <p>Drewniana stolarka zewnętrzna i ogrodowa — od dużych konstrukcji po detale, które robią klimat w ogrodzie.</p>
   </div>
 </section>
-<section><div class="wrap">
-  <div class="svc">
-    <div class="item reveal"><div class="no">01</div><div><h3>Wiaty i zadaszenia</h3><p>Wiaty garażowe i samochodowe, zadaszenia wejść, tarasów i wejść do domu. Konstrukcja z solidnego drewna, wykończona okładziną, która wygląda jak mebel — nie jak prowizorka.</p></div></div><div class="item reveal"><div class="no">02</div><div><h3>Altany i pergole</h3><p>Altany ogrodowe, pergole i wiaty biesiadne — miejsce na grilla, odpoczynek i spotkania. Dopasowane do wielkości działki i stylu domu.</p></div></div><div class="item reveal"><div class="no">03</div><div><h3>Tarasy i zadaszenia tarasów</h3><p>Tarasy z desek oraz lekkie, nowoczesne zadaszenia łączące drewno ze szkłem lub poliwęglanem — cień latem, ochrona przed deszczem przez cały rok.</p></div></div><div class="item reveal"><div class="no">04</div><div><h3>Drewniane żaluzje / ruchome deseczki</h3><p>Nasz znak rozpoznawczy. Regulowane drewniane listwy na taras, wiatę, balkon czy elewację — cień, prywatność i charakter w jednym.</p></div></div><div class="item reveal"><div class="no">05</div><div><h3>Donice i meble ogrodowe</h3><p>Smukłe donice, ławki, huśtawki, stoły i drewniane detale, które spinają aranżację ogrodu w całość.</p></div></div><div class="item reveal"><div class="no">06</div><div><h3>Zabudowy zewnętrzne</h3><p>Obudowy pomp ciepła i śmietników, osłony, zabudowy techniczne i aranżacje wokół domu — schludnie i pod jeden styl.</p></div></div>
+<section><div class="wrap"><div class="svc-row">
+  <div class="svc-row-art reveal"><img src="img/g16.jpg" alt="Wiaty i zadaszenia"></div>
+  <div class="reveal"><span class="num">01</span><h3>Wiaty i zadaszenia</h3><p class="muted">Solidna konstrukcja z drewna, wykończona okładziną z desek lub żaluzji. Zadaszenie, które chroni samochód czy wejście, a przy okazji podnosi wygląd całej posesji.</p>
+  <ul><li>Wiaty garażowe i samochodowe</li><li>Zadaszenia wejść i tarasów</li><li>Drewniana okładnina i wykończenie</li></ul></div>
+</div><div class="svc-row rev">
+  <div class="svc-row-art reveal"><img src="img/g11.jpg" alt="Altany i pergole"></div>
+  <div class="reveal"><span class="num">02</span><h3>Altany i pergole</h3><p class="muted">Altany, pergole i wiaty biesiadne projektujemy pod wielkość działki i styl domu — żeby było gdzie usiąść z rodziną, w cieniu i o każdej porze sezonu.</p>
+  <ul><li>Altany ogrodowe i biesiadne</li><li>Pergole i osłony</li><li>Miejsce na grilla i odpoczynek</li></ul></div>
+</div><div class="svc-row">
+  <div class="svc-row-art reveal"><img src="img/g25.jpg" alt="Tarasy i zadaszenia tarasów"></div>
+  <div class="reveal"><span class="num">03</span><h3>Tarasy i zadaszenia tarasów</h3><p class="muted">Taras z porządnych desek oraz eleganckie zadaszenie, które łączy drewno ze szkłem lub poliwęglanem — cień latem i ochrona przed deszczem przez cały rok.</p>
+  <ul><li>Tarasy z desek</li><li>Lekkie zadaszenia drewno + szkło</li><li>Osłony boczne z żaluzji</li></ul></div>
+</div><div class="svc-row rev">
+  <div class="svc-row-art reveal"><img src="img/g34.jpg" alt="Drewniane żaluzje (ruchome deseczki)"></div>
+  <div class="reveal"><span class="num">04</span><h3>Drewniane żaluzje (ruchome deseczki)</h3><p class="muted">Nasz znak rozpoznawczy. Ruchome listwy, które ustawisz jak chcesz — przymkniesz na pełną prywatność albo uchylisz, żeby wpuścić światło i powietrze.</p>
+  <ul><li>Regulowane drewniane listwy</li><li>Cień, prywatność i przewiew</li><li>Na taras, wiatę, balkon, elewację</li></ul></div>
+</div><div class="svc-row">
+  <div class="svc-row-art reveal"><img src="img/g06.jpg" alt="Donice i meble ogrodowe"></div>
+  <div class="reveal"><span class="num">05</span><h3>Donice i meble ogrodowe</h3><p class="muted">Drewniane detale, które kończą całość — donice, ławki, stoły i huśtawki w jednym stylu z resztą zabudowy ogrodowej.</p>
+  <ul><li>Smukłe donice drewniane</li><li>Ławki, stoły, huśtawki</li><li>Detale spinające aranżację</li></ul></div>
+</div><div class="svc-row rev">
+  <div class="svc-row-art reveal"><img src="img/g01.jpg" alt="Zabudowy zewnętrzne"></div>
+  <div class="reveal"><span class="num">06</span><h3>Zabudowy zewnętrzne</h3><p class="muted">Schludne obudowy i osłony, które chowają to, co brzydkie, i spinają otoczenie domu pod jeden, spójny styl.</p>
+  <ul><li>Obudowy pomp i śmietników</li><li>Osłony i zabudowy techniczne</li><li>Aranżacje wokół domu</li></ul></div>
+</div></div></section>
+<section class="cta"><div class="wrap">
+  <div class="reveal"><span class="eyebrow">Współpraca</span><h2>Wycena pod Twój projekt</h2><p>Zadzwoń i opowiedz, co planujesz — przygotujemy indywidualną wycenę i termin.</p></div>
+  <div class="cta-actions reveal">
+    <a href="tel:+48501219459" class="btn btn-light">Zadzwoń <span class="arr">→</span></a>
+    <a href="tel:+48501219459" class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.3)">+48 501 219 459</a>
   </div>
 </div></section>
-<section class="bg2"><div class="wrap">
-  <div class="sec-head reveal"><div class="eyebrow">Z czego słyniemy</div><h2>Każda realizacja na wymiar</h2><p class="lead">Nie sprzedajemy gotowców. Przyjeżdżamy, słuchamy, proponujemy rozwiązanie i wykonujemy je pod Twój ogród — od projektu po montaż.</p></div>
-  <div class="cards"><div class="card reveal"><div class="ph"><img src="img/g16.jpg" alt="Wiaty i zadaszenia"></div><div class="body"><h3>Wiaty i zadaszenia</h3><p>Wiaty garażowe, zadaszenia wejść i tarasów — z drewnianą okładziną, która wygląda jak mebel.</p></div></div><div class="card reveal"><div class="ph"><img src="img/g11.jpg" alt="Altany i pergole"></div><div class="body"><h3>Altany i pergole</h3><p>Miejsce na odpoczynek w ogrodzie — altany, pergole i wiaty biesiadne z litego drewna.</p></div></div><div class="card reveal"><div class="ph"><img src="img/g25.jpg" alt="Tarasy i zadaszenia tarasów"></div><div class="body"><h3>Tarasy i zadaszenia tarasów</h3><p>Tarasy z desek oraz lekkie, eleganckie zadaszenia ze szkłem i drewnem.</p></div></div><div class="card reveal"><div class="ph"><img src="img/g34.jpg" alt="Drewniane żaluzje"></div><div class="body"><h3>Drewniane żaluzje</h3><p>Nasze ruchome deseczki - regulowane okładziny dające cień, prywatność i charakter.</p></div></div><div class="card reveal"><div class="ph"><img src="img/g06.jpg" alt="Donice i meble ogrodowe"></div><div class="body"><h3>Donice i meble ogrodowe</h3><p>Smukłe donice, ławki, huśtawki i stoły — detale, które spinają całą aranżację.</p></div></div><div class="card reveal"><div class="ph"><img src="img/g01.jpg" alt="Zabudowy zewnętrzne"></div><div class="body"><h3>Zabudowy zewnętrzne</h3><p>Obudowy, osłony i aranżacje wokół domu — schludnie i pod jeden styl.</p></div></div></div>
-</div></section>
-<section><div class="wrap"><div class="band reveal">
-    <h2>Wycena pod Twój projekt</h2><p>Zadzwoń i opowiedz, co planujesz — przygotujemy indywidualną wycenę.</p>
-    <a class="btn btn-gold" href="tel:+48501219459">Zadzwoń: +48 501 219 459</a>
-    </div></div></section>
-
 <footer>
   <div class="wrap">
-    <div class="fgrid">
-      <div class="col">
-        <div class="fbrand"><img src="img/logo.jpg" alt="Wióry Lecą"><b>Kreatywna Stolarnia „Wióry Lecą"</b></div>
-        <p>Drewniana stolarka ogrodowa i zewnętrzna na wymiar — tarasy, altany, zadaszenia, wiaty i nasze autorskie drewniane żaluzje. Pułtusk i okolice.</p>
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img class="flogo" src="img/logo.jpg" alt="Wióry Lecą">
+        <div class="name">Wióry Lecą</div>
+        <p>Kreatywna Stolarnia z Pułtuska. Drewniana stolarka ogrodowa i zewnętrzna na wymiar — tarasy, altany, zadaszenia, wiaty i drewniane żaluzje.</p>
       </div>
-      <div class="col">
-        <h4>Oferta</h4>
-        <a href="oferta.html">Wiaty i zadaszenia</a>
-        <a href="oferta.html">Altany i pergole</a>
-        <a href="oferta.html">Tarasy</a>
+      <div class="foot-col">
+        <h4>Nawigacja</h4>
+        <a href="index.html">Strona główna</a>
+        <a href="oferta.html">Oferta</a>
         <a href="zaluzje.html">Drewniane żaluzje</a>
-        <a href="oferta.html">Donice i meble ogrodowe</a>
+        <a href="realizacje.html">Realizacje</a>
+        <a href="o-nas.html">O firmie</a>
+        <a href="kontakt.html">Kontakt</a>
       </div>
-      <div class="col">
+      <div class="foot-col">
         <h4>Kontakt</h4>
         <a href="tel:+48501219459">+48 501 219 459</a>
         <p>Pułtusk i okolice</p>
-        <a href="realizacje.html">Zobacz realizacje</a>
       </div>
     </div>
-    <div class="fbot">
+    <div class="foot-bot">
       <span>© Kreatywna Stolarnia „Wióry Lecą"</span>
       <span>Projekt strony: Krzysztof Brzeziński</span>
     </div>
   </div>
 </footer>
 <div class="lb" id="lb" hidden><img src="" alt=""></div>
-<script src="assets/main.js"></script>
+<script src="assets/main.js?v=2"></script>
 </body>
 </html>

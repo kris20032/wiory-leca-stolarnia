@@ -7,84 +7,91 @@
 <meta name="description" content="Drewniane żaluzje na wymiar — ruchome deseczki dające cień, prywatność i charakter. Na taras, wiatę, balkon i elewację. Stolarnia Wióry Lecą, Pułtusk.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css?v=2">
 </head>
 <body>
-<header>
-  <div class="nav">
+<header class="nav">
+  <div class="wrap nav-inner">
     <a class="brand" href="index.html">
-      <img class="logo" src="img/logo.jpg" alt="Logo Wióry Lecą">
-      <span><b>Wióry Lecą</b><span class="sub">Kreatywna Stolarnia · Pułtusk</span></span>
+      <img class="blogo" src="img/logo.jpg" alt="Logo Wióry Lecą">
+      <span class="bw"><span class="name">Wióry Lecą</span><span class="sub">Kreatywna Stolarnia · Pułtusk</span></span>
     </a>
-    <nav class="links"><a href="index.html">Start</a><a href="oferta.html">Oferta</a><a href="zaluzje.html" class="active">Drewniane żaluzje</a><a href="realizacje.html">Realizacje</a><a href="o-nas.html">O firmie</a><a href="kontakt.html">Kontakt</a></nav>
-    <a class="btn btn-gold cta" href="tel:+48501219459">Zadzwoń</a>
-    <button class="burger" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    <nav class="nav-links">
+      <a href="index.html">Strona główna</a><a href="oferta.html">Oferta</a><a href="zaluzje.html" class="active">Drewniane żaluzje</a><a href="realizacje.html">Realizacje</a><a href="o-nas.html">O firmie</a><a href="kontakt.html">Kontakt</a>
+      <a href="tel:+48501219459" class="btn btn-accent">Zadzwoń</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </header>
-<section class="phero" style="padding:0">
-  <img class="bg" src="img/g34.jpg" alt="Drewniane żaluzje — „ruchome deseczki"">
-  <div class="wrap inner">
-    <div class="eyebrow">Nasz znak rozpoznawczy</div>
-    <h1>Drewniane żaluzje — „ruchome deseczki"</h1>
+<section class="pagehead">
+  <img src="img/g34.jpg" alt="Drewniane żaluzje — ruchome deseczki">
+  <div class="wrap">
+    <span class="eyebrow">Nasz znak rozpoznawczy</span>
+    <h1>Drewniane żaluzje — ruchome deseczki</h1>
     <p>Regulowane drewniane osłony, z których jesteśmy znani. Cień, prywatność i charakter — bez kompromisów.</p>
   </div>
 </section>
-<section><div class="wrap"><div class="feature">
-  <div class="txt reveal">
-    <h2 class="mt0">Cień i prywatność, a do tego światło i powietrze</h2>
-    <p>Drewniane żaluzje to ruchome listwy, które ustawiasz tak, jak chcesz — przymkniesz na pełną prywatność albo uchylisz, żeby wpuścić światło i przewiew. To rozwiązanie, które zwykła pełna osłona po prostu nie da.</p>
-    <p>Sprawdzają się na tarasie, w wiacie, na balkonie i jako element elewacji. Nadają budynkowi nowoczesny, ciepły charakter — i od razu widać, że to robota stolarska, a nie gotowiec z marketu.</p>
-    <span class="tag">Projekt · wykonanie · montaż</span>
+<section><div class="wrap split">
+  <div class="split-art reveal"><img src="img/g16.jpg" alt="Drewniane żaluzje na wiacie"></div>
+  <div class="split-copy reveal">
+    <span class="eyebrow">Jak to działa</span>
+    <h2>Cień i prywatność, a do tego światło i powietrze</h2>
+    <p class="muted">Drewniane żaluzje to ruchome listwy, które ustawiasz tak, jak chcesz — przymkniesz na pełną prywatność albo uchylisz, żeby wpuścić światło i przewiew. Tego zwykła pełna osłona po prostu nie da.</p>
+    <p class="muted">Sprawdzają się na tarasie, w wiacie, na balkonie i jako element elewacji — i od razu widać, że to robota stolarska, a nie gotowiec z marketu.</p>
   </div>
-  <div class="pic reveal"><img src="img/g16.jpg" alt="Drewniane żaluzje na wiacie"></div>
-</div></div></section>
-<section class="bg2"><div class="wrap"><div class="feature rev">
-  <div class="txt reveal">
-    <h2 class="mt0">Na wymiar — pod Twój dom i ogród</h2>
-    <p>Dobieramy szerokość i rozstaw listew, układ oraz odcień drewna tak, żeby całość grała z domem i otoczeniem. Możemy je połączyć z zadaszeniem tarasu, wiatą albo zrobić jako samodzielną ściankę osłonową.</p>
-    <p>Każdy element wykonujemy i montujemy sami — wiesz, kto za tym stoi i do kogo zadzwonić.</p>
-  </div>
-  <div class="pic reveal"><img src="img/g00.jpg" alt="Drewniane żaluzje na wymiar"></div>
-</div></div></section>
-<section><div class="wrap">
-  <div class="sec-head reveal center"><div class="eyebrow">Przykłady</div><h2>Drewniane żaluzje w realizacjach</h2></div>
-  <div class="gallery reveal" id="gal" data-count="10"></div>
 </div></section>
-<section><div class="wrap"><div class="band reveal">
-    <h2>Chcesz takie u siebie?</h2><p>Zadzwoń — doradzimy układ i odcień, i przygotujemy wycenę pod Twój taras lub elewację.</p>
-    <a class="btn btn-gold" href="tel:+48501219459">Zadzwoń: +48 501 219 459</a>
-    </div></div></section>
-
+<section class="trust"><div class="wrap split rev">
+  <div class="split-art reveal"><img src="img/g00.jpg" alt="Drewniane żaluzje na wymiar"></div>
+  <div class="split-copy reveal">
+    <span class="eyebrow">Na wymiar</span>
+    <h2>Pod Twój dom i ogród</h2>
+    <p class="muted">Dobieramy szerokość i rozstaw listew, układ oraz odcień drewna tak, żeby całość grała z domem i otoczeniem. Możemy połączyć je z zadaszeniem tarasu, wiatą albo zrobić jako samodzielną ściankę osłonową.</p>
+    <p class="muted">Każdy element wykonujemy i montujemy sami.</p>
+    <a href="kontakt.html" class="btn btn-ghost">Zapytaj o wycenę <span class="arr">→</span></a>
+  </div>
+</div></section>
+<section><div class="wrap">
+  <div class="head reveal"><span class="eyebrow">Przykłady</span><h2>Drewniane żaluzje w realizacjach</h2></div>
+  <div class="gallery"><div class="tile t-two3 reveal"><img src="img/g15.jpg" alt="Realizacja Wióry Lecą — drewniana stolarka ogrodowa"><div class="cap">Realizacja<small>Kreatywna Stolarnia Wióry Lecą</small></div></div><div class="tile t-third reveal"><img src="img/g16.jpg" alt="Realizacja Wióry Lecą — drewniana stolarka ogrodowa"><div class="cap">Realizacja<small>Kreatywna Stolarnia Wióry Lecą</small></div></div><div class="tile t-third reveal"><img src="img/g17.jpg" alt="Realizacja Wióry Lecą — drewniana stolarka ogrodowa"><div class="cap">Realizacja<small>Kreatywna Stolarnia Wióry Lecą</small></div></div><div class="tile t-third reveal"><img src="img/g18.jpg" alt="Realizacja Wióry Lecą — drewniana stolarka ogrodowa"><div class="cap">Realizacja<small>Kreatywna Stolarnia Wióry Lecą</small></div></div><div class="tile t-third reveal"><img src="img/g19.jpg" alt="Realizacja Wióry Lecą — drewniana stolarka ogrodowa"><div class="cap">Realizacja<small>Kreatywna Stolarnia Wióry Lecą</small></div></div></div>
+</div></section>
+<section class="cta"><div class="wrap">
+  <div class="reveal"><span class="eyebrow">Współpraca</span><h2>Chcesz takie u siebie?</h2><p>Zadzwoń — doradzimy układ i odcień, i przygotujemy wycenę pod Twój taras lub elewację.</p></div>
+  <div class="cta-actions reveal">
+    <a href="tel:+48501219459" class="btn btn-light">Zadzwoń <span class="arr">→</span></a>
+    <a href="tel:+48501219459" class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.3)">+48 501 219 459</a>
+  </div>
+</div></section>
 <footer>
   <div class="wrap">
-    <div class="fgrid">
-      <div class="col">
-        <div class="fbrand"><img src="img/logo.jpg" alt="Wióry Lecą"><b>Kreatywna Stolarnia „Wióry Lecą"</b></div>
-        <p>Drewniana stolarka ogrodowa i zewnętrzna na wymiar — tarasy, altany, zadaszenia, wiaty i nasze autorskie drewniane żaluzje. Pułtusk i okolice.</p>
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img class="flogo" src="img/logo.jpg" alt="Wióry Lecą">
+        <div class="name">Wióry Lecą</div>
+        <p>Kreatywna Stolarnia z Pułtuska. Drewniana stolarka ogrodowa i zewnętrzna na wymiar — tarasy, altany, zadaszenia, wiaty i drewniane żaluzje.</p>
       </div>
-      <div class="col">
-        <h4>Oferta</h4>
-        <a href="oferta.html">Wiaty i zadaszenia</a>
-        <a href="oferta.html">Altany i pergole</a>
-        <a href="oferta.html">Tarasy</a>
+      <div class="foot-col">
+        <h4>Nawigacja</h4>
+        <a href="index.html">Strona główna</a>
+        <a href="oferta.html">Oferta</a>
         <a href="zaluzje.html">Drewniane żaluzje</a>
-        <a href="oferta.html">Donice i meble ogrodowe</a>
+        <a href="realizacje.html">Realizacje</a>
+        <a href="o-nas.html">O firmie</a>
+        <a href="kontakt.html">Kontakt</a>
       </div>
-      <div class="col">
+      <div class="foot-col">
         <h4>Kontakt</h4>
         <a href="tel:+48501219459">+48 501 219 459</a>
         <p>Pułtusk i okolice</p>
-        <a href="realizacje.html">Zobacz realizacje</a>
       </div>
     </div>
-    <div class="fbot">
+    <div class="foot-bot">
       <span>© Kreatywna Stolarnia „Wióry Lecą"</span>
       <span>Projekt strony: Krzysztof Brzeziński</span>
     </div>
   </div>
 </footer>
 <div class="lb" id="lb" hidden><img src="" alt=""></div>
-<script src="assets/main.js"></script>
+<script src="assets/main.js?v=2"></script>
 </body>
 </html>
