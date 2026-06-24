@@ -31,7 +31,7 @@
     var lbimg = lb.querySelector('img');
     document.querySelectorAll('.gallery').forEach(function (g) {
       g.addEventListener('click', function (e) {
-        var t = e.target.closest('.tile'); if (!t) return;
+        var t = e.target.closest('.ph,.tile'); if (!t) return;
         var im = t.querySelector('img'); if (!im) return;
         lbimg.src = im.getAttribute('src'); lb.hidden = false; document.body.style.overflow = 'hidden';
       });
